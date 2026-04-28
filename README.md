@@ -12,7 +12,7 @@ Se documenta el avance de las etapas de preprocesamiento de imágenes y conforma
 
 ---
 
-## Preprocesamiento de Imágenes 
+## Procesamiento de Imágenes 
 
 Las imágenes fueron recolectadas de forma individual, siguiendo la metodología establecida para la simulación de la línea de producción. Cada imagen fue tomada sobre una hoja blanca, donde los elementos presentes podían ser granos de arroz (contaminación positiva), otros objetos como clips (contaminación negativa).
 
