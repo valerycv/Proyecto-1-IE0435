@@ -9,13 +9,13 @@
 
 ## Introducción
 
-Se documenta el avance correspondiente a las etapas de preprocesamiento de imágenes y conformación del conjunto de datos (dataset), según lo establecido en los puntos 3.2 y 3.3 del enunciado del Proyecto 1. El objetivo de estas etapas es transformar las imágenes recolectadas en una representación numérica adecuada para el entrenamiento de modelos de clasificación clásica.
+Se documenta el avance de las etapas de preprocesamiento de imágenes y conformación del conjunto de datos (dataset). El objetivo de estas etapas es convertir las imágenes recolectadas en una representación numérica adecuada para el entrenamiento de modelos de clasificación clásica.
 
 ---
 
 ## Preprocesamiento de Imágenes 
 
-Las imágenes fueron recolectadas de forma individual, siguiendo la metodología establecida para la simulación de la línea de producción. Cada imagen fue tomada sobre una hoja blanca, donde los elementos presentes podían ser granos de arroz (contaminación positiva), otros objetos como clips o aros (contaminación negativa), o ningún objeto.
+Las imágenes fueron recolectadas de forma individual, siguiendo la metodología establecida para la simulación de la línea de producción. Cada imagen fue tomada sobre una hoja blanca, donde los elementos presentes podían ser granos de arroz (contaminación positiva), otros objetos como clips (contaminación negativa).
 
 El preprocesamiento consistió en los siguientes pasos:
 
@@ -56,8 +56,8 @@ El dataset.csv presenta las siguientes características:
 |---|---|
 | Número de filas | 30 |
 | Número de columnas | 16,385 |
-| Columnas de píxeles | 16,384 (`p0` a `p16383`) |
-| Columna de etiqueta | 1 (`etiqueta`) |
+| Columnas de píxeles | 16,384 (p0 a p16383) |
+| Columna de etiqueta | 1 (etiqueta) |
 | Valores en píxeles | Binarios (0 o 1) |
 | Distribución de clases | 15 positivas, 15 negativas |
 
