@@ -1,5 +1,4 @@
-# Reporte de Avance – Proyecto 1
-## Clasificación de Contaminaciones en una Línea de Producción Simulada
+# Primer avance – Proyecto 1
 
 **Curso:** IE0435 – Inteligencia Artificial en Ingeniería Eléctrica
 **Estudiante:** Valery Carranza Vásquez - B91660  
