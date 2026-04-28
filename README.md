@@ -64,13 +64,6 @@ El dataset.csv presenta las siguientes características:
 
 El script desarrollado en Python (convertir_imagenes.py) automatiza el proceso completo de conversión para todas las imágenes contenidas en la carpeta de muestras procesadas. El código detecta la clase de cada imagen a partir del nombre del archivo (positivo*.png o negativo*.png) y genera el archivo CSV con el encabezado y las etiquetas correspondientes.
 
-```python
-# Fragmento principal del proceso de binarización
-arr    = np.array(img)                    # matriz de valores 0-255
-binario = (arr >= UMBRAL).astype(int)     # 1=blanco, 0=objeto
-vector  = binario.flatten()              # vector de 16,384 elementos
-```
-
 ---
 
 ## Herramientas Utilizadas
