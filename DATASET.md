@@ -10,7 +10,7 @@ Este dataset simula imágenes de una línea de producción donde puede haber con
 Cada fila del CSV representa una imagen de 128×128 píxeles aplanada, seguida de una etiqueta binaria:
 
 - **1** = imagen contiene granos de arroz (contaminación positiva)
-- **0** = imagen no contiene arroz (puede estar vacía o contener otros objetos como clips o aros)
+- **0** = imagen no contiene arroz (puede estar vacía o contener clips )
 
 ---
 
@@ -25,13 +25,8 @@ Cada fila del CSV representa una imagen de 128×128 píxeles aplanada, seguida d
 
 ### Aporte individual
 
-- 30 imágenes propias capturadas con un **iPhone 13**.
-- 15 positivas (hoja blanca con uno o varios granos de arroz crudo) + 15 negativas (hoja blanca con clips, aros u otros objetos).
-
-### Dispositivos de captura del grupo
-
-- Varios teléfonos celulares de los estudiantes (marcas y modelos no estandarizados).
-- Resoluciones originales variables.
+- 30 imágenes propias capturadas con cámara de celular
+- 15 positivas (hoja blanca con uno o varios granos de arroz crudo) + 15 negativas (hoja blanca con clips).
 
 ### Condiciones de iluminación
 
