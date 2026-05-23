@@ -1,19 +1,17 @@
-# MODEL_CARD.md — Ficha técnica del modelo
+# MODEL_CARD.md 
 
 ## 1. Identificación del modelo
 
 - **Nombre del modelo**: Clasificador de contaminaciones por granos de arroz
-- **Versión**: 1.0
 - **Tipo**: KNN (K-Nearest Neighbors) — clasificador binario
-- **Autora**: Valery Carranza Vásquez
+- **Estudiante**: Valery Carranza Vásquez
 - **Carné**: B91660
-- **Fecha de entrenamiento**: [Fecha en que corriste el script, ej. 22/05/2026]
 - **Curso**: IE0435 — Inteligencia Artificial en Ingeniería Eléctrica, UCR
 - **Archivo del modelo**: `B91660_valery_carranza.joblib`
 
 ---
 
-## 2. Uso previsto (Intended use)
+## 2. Uso previsto
 
 ### Uso pretendido
 
@@ -21,10 +19,10 @@ Clasificar imágenes de 128×128 píxeles binarizadas (0/1) de una línea de pro
 
 ### Usuarios objetivo
 
-- Estudiantes y profesores del curso IE0435.
+- Estudiantes y profesor del curso.
 - Demostración académica de un pipeline completo de clasificación clásica con scikit-learn.
 
-### Fuera de alcance (Out of scope)
+### Fuera de alcance
 
 - **No usar en producción real**: el modelo fue entrenado con un conjunto pequeño de datos académicos (119 imágenes) y condiciones controladas.
 - **No es robusto** a cambios drásticos de iluminación, fondo, cámara o resolución.
@@ -33,14 +31,12 @@ Clasificar imágenes de 128×128 píxeles binarizadas (0/1) de una línea de pro
 
 ---
 
-## 3. Resumen de datos (Data summary)
+## 3. Resumen de datos
 
 - **Origen**: imágenes recolectadas colaborativamente por varios estudiantes del curso, consolidadas en un único CSV.
 - **Cantidad total**: 119 imágenes (59 positivas con arroz, 60 negativas).
 - **Resolución de entrada al modelo**: 128×128 píxeles binarizados (16,384 características por imagen).
-- **Variaciones presentes**: múltiples dispositivos (varias cámaras de teléfono, incluida iPhone 13 para el aporte propio), distintas iluminaciones y entornos de captura entre estudiantes.
-
-Ver [`DATASET.md`](DATASET.md) para más detalles sobre la recolección y limitaciones.
+- **Variaciones presentes**: múltiples dispositivos celulares, distintas iluminaciones y entornos de captura entre estudiantes.
 
 ---
 
@@ -48,7 +44,7 @@ Ver [`DATASET.md`](DATASET.md) para más detalles sobre la recolección y limita
 
 - **Etiquetado manual** por cada estudiante al momento de la captura.
 - Las etiquetas se codifican en el nombre del archivo (`positivo_*.png` / `negativo_*.png`) y luego se vuelven una columna `etiqueta` en el CSV.
-- **Consistencia**: variable entre estudiantes (criterios individuales).
+- **Consistencia**: variable entre estudiantes.
 - **Sesgo posible**: cada persona puede tener un criterio distinto sobre qué cuenta como "contaminación visible".
 
 ---
@@ -70,14 +66,14 @@ Ver [`DATASET.md`](DATASET.md) para más detalles sobre la recolección y limita
 
 | Modelo                  | CV F1   | Test Acc | Test Prec | Test Rec | Test F1 |
 |-------------------------|---------|----------|-----------|----------|---------|
-| **KNN**                 | **0.6768** | 0.6000   | 0.5556    | 1.0000   | 0.7143  |
-| Naive Bayes (Bernoulli) | 0.6724  | 0.5333   | 0.5238    | 0.7333   | 0.6111  |
+| KNN                     | 0.6768  | 0.6000   | 0.5556    | 1.0000   | 0.7143  |
+| Naive Bayes             | 0.6724  | 0.5333   | 0.5238    | 0.7333   | 0.6111  |
 | SVM                     | 0.6675  | 0.6000   | 0.5714    | 0.8000   | 0.6667  |
 | Árbol de Decisión       | 0.6098  | 0.6667   | 0.6087    | 0.9333   | 0.7368  |
 
 ### Modelo seleccionado
 
-- **KNN** con hiperparámetros: `n_neighbors = 1`, `weights = "uniform"`, `metric = "euclidean"`.
+- KNN con hiperparámetros: `n_neighbors = 1`, `weights = "uniform"`, `metric = "euclidean"`.
 - Razón de selección: mejor F1 en validación cruzada (0.6768). Aunque el árbol obtuvo un F1 más alto en el conjunto de prueba (0.7368), KNN mostró el mejor desempeño promedio en validación cruzada (5-fold), lo cual es una estimación más robusta del desempeño esperado en datos nuevos.
 
 ---
@@ -107,7 +103,7 @@ Ver [`DATASET.md`](DATASET.md) para más detalles sobre la recolección y limita
 
 ### Hardware usado
 
-- **Equipo**: Laptop personal con Windows 10.
+- **Equipo**: Laptop personal.
 - **Sistema operativo**: Windows 10.
 
 ### Software
@@ -136,9 +132,3 @@ python entrenar_modelos.py
 - Todas las operaciones aleatorias usan `random_state = 42`.
 
 ---
-
-## 9. Contacto
-
-- **Autora**: Valery Carranza Vásquez
-- **Correo**: valery.carranza@ucr.ac.cr
-- **Repositorio**: [URL del repositorio en GitHub] ← edita esto después de subirlo
