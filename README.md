@@ -19,32 +19,9 @@ El pipeline incluye:
 3. **Consolidación colaborativa**: combinación de los datasets de varios estudiantes del curso en un único CSV.
 4. **Entrenamiento** y evaluación de cuatro modelos clásicos: Árbol de Decisión, Naive Bayes (Bernoulli), KNN y SVM, con búsqueda de hiperparámetros mediante `GridSearchCV` y validación cruzada estratificada.
 5. **Exportación** del mejor modelo en formato `.joblib`.
-
 ---
 
-## 2. Estructura del repositorio
-
-```
-.
-├── README.md                        # Este archivo
-├── DATASET.md                       # Detalles sobre el dataset
-├── MODEL_CARD.md                    # Ficha técnica del modelo
-├── LICENSE                          # Licencia del proyecto
-├── requirements.txt                 # Dependencias Python
-├── convertir_imagenes.py            # Script de preprocesamiento (paso 3.3)
-├── combinar_datasets.py             # Script para unir los CSV del grupo
-├── entrenar_modelos.py              # Script de entrenamiento y exportación (pasos 3.4 y 3.5)
-├── dataset.csv                      # Dataset individual (30 imágenes)
-├── dataset_grupo.csv                # Dataset consolidado del grupo (119 imágenes)
-├── B91660_valery_carranza.joblib    # Mejor modelo exportado
-├── datasets_companeros/             # CSV de compañeros pendientes de unir
-└── reports/
-    └── informe_final.md             # Informe final del proyecto
-```
-
----
-
-## 3. Requisitos
+## 2. Requisitos
 
 - Python 3.10 o superior (probado en Python 3.13)
 - Bibliotecas listadas en `requirements.txt`
@@ -57,7 +34,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Cómo correr el entrenamiento
+## 3. Cómo correr el entrenamiento
 
 1. Colocar las imágenes preprocesadas (128×128, escala de grises, formato `.png`) en una carpeta llamada `muestras-procesadas/`.
    - Los nombres deben comenzar con `positivo` o `negativo` para asignar la etiqueta automáticamente.
@@ -95,7 +72,7 @@ pip install -r requirements.txt
 
 ---
 
-## 5. Cómo hacer inferencia con el modelo
+## 4. Cómo hacer inferencia con el modelo
 
 ```python
 import joblib
@@ -117,12 +94,12 @@ print("Contaminación detectada" if prediccion == 1 else "Sin contaminación")
 
 ---
 
-## 6. Reproducibilidad
+## 5. Reproducibilidad
 
 Todos los scripts usan `random_state = 42` para garantizar resultados reproducibles. Cualquier persona que clone este repositorio y siga los pasos anteriores obtendrá las mismas métricas.
 
 ---
 
-## 7. Licencia
+## 6. Licencia
 
 Ver archivo [`LICENSE`](LICENSE).
