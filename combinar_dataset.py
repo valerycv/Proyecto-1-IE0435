@@ -1,32 +1,15 @@
+# código obtenido por Claude
+
 import os
 import pandas as pd
 import numpy as np
  
- 
-# --------------------------- CONFIGURACION ---------------------------
- 
-CARPETA_COMPANEROS = "datasets_grupo"   # carpeta con los CSV ajenos
-MI_DATASET         = "dataset.csv"           # tu CSV propio (ya bien etiquetado)
-SALIDA             = "dataset_grupo.csv"     # archivo combinado
- 
-# Si sabes que algun companero tiene un orden conocido de etiquetas,
-# anadelo aqui. Ejemplo:
-# ETIQUETAS_CONOCIDAS = {
-#     "datasetKDVJ_in_.csv": [1]*15 + [0]*15,         # primeras 15 positivas, ultimas 15 negativas
-#     "dataset_otroCompanero.csv": [0]*15 + [1]*15,   # al reves
-# }
-ETIQUETAS_CONOCIDAS = {
-    # Pon aqui los archivos cuyo orden de etiquetas te hayan confirmado
-}
- 
- 
-# --------------------------- FUNCIONES -------------------------------
+CARPETA_COMPANEROS = "datasets_grupo"   
+MI_DATASET         = "dataset.csv"          
+SALIDA             = "dataset_grupo.csv"    
  
 def cargar_y_normalizar(ruta_csv, etiquetas_manuales=None):
-    """
-    Carga un CSV y devuelve un DataFrame con columnas p0..p16383 + etiqueta.
-    Devuelve None si no se puede procesar.
-    """
+
     nombre = os.path.basename(ruta_csv)
     try:
         df = pd.read_csv(ruta_csv)
