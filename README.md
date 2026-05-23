@@ -2,8 +2,8 @@
 
 **Curso:** IE0435 — Inteligencia Artificial en Ingeniería Eléctrica
 **Universidad de Costa Rica**
-**Semestre:** I-2026
-**Autora:** Valery Carranza Vásquez
+I-2026
+**Estudiante:** Valery Carranza Vásquez
 **Carné:** B91660
 
 ---
@@ -59,10 +59,10 @@ pip install -r requirements.txt
 
 ## 4. Cómo correr el entrenamiento
 
-1. Coloca las imágenes preprocesadas (128×128, escala de grises, formato `.png`) en una carpeta llamada `muestras-procesadas/`.
+1. Colocar las imágenes preprocesadas (128×128, escala de grises, formato `.png`) en una carpeta llamada `muestras-procesadas/`.
    - Los nombres deben comenzar con `positivo` o `negativo` para asignar la etiqueta automáticamente.
 
-2. Genera tu dataset CSV individual:
+2. Generar el dataset CSV individual:
 
    ```bash
    python convertir_imagenes.py
@@ -70,10 +70,10 @@ pip install -r requirements.txt
 
    Esto produce `dataset.csv` con 16,385 columnas (16,384 píxeles + 1 etiqueta).
 
-3. (Opcional) Combina con los CSV de tus compañeros:
+3. Combinar con los CSV de varios compañeros:
 
-   - Coloca los CSV ajenos en la carpeta `datasets_companeros/`.
-   - Corre:
+   - Colocar los CSV externos en la carpeta `datasets_companeros/`.
+   - Correr:
 
      ```bash
      python combinar_datasets.py
@@ -81,7 +81,7 @@ pip install -r requirements.txt
 
    - Esto genera `dataset_grupo.csv`.
 
-4. Entrena los modelos y exporta el mejor:
+4. Entrenar los modelos y exportar el mejor:
 
    ```bash
    python entrenar_modelos.py
@@ -123,13 +123,6 @@ Todos los scripts usan `random_state = 42` para garantizar resultados reproducib
 
 ---
 
-## 7. Contacto
-
-- **Autora**: Valery Carranza Vásquez
-- **Correo**: valery.carranza@ucr.ac.cr
-
----
-
-## 8. Licencia
+## 7. Licencia
 
 Ver archivo [`LICENSE`](LICENSE).
